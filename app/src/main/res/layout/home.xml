@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="SEIMBANG"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+       />
+
+    <TextView
+        android:id="@+id/subjudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="SISTEM APLIKASI PERENCANAAN MUSRENBANG"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scrollbarSize="12dp"
+        android:scrollbarStyle="insideInset">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/bmenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="40dp"
+                android:clickable="true"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                fancy:fb_borderColor="#d81b60"
+                fancy:fb_borderWidth="2dp"
+                fancy:fb_defaultColor="#FFFFFF"
+                fancy:fb_focusColor="#cecece"
+                fancy:fb_fontIconResource="&#xf078;"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Pilih Menu"
+                fancy:fb_textColor="#d81b60" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/bkat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                fancy:fb_borderColor="#d81b60"
+                fancy:fb_borderWidth="2dp"
+                fancy:fb_defaultColor="#FFFFFF"
+                fancy:fb_focusColor="#cecece"
+                fancy:fb_fontIconResource="&#xf078;"
+                fancy:fb_iconPosition="left"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Pilih Kategori"
+                fancy:fb_textColor="#d81b60" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/usulan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:hint="Usulan"
+                app:met_clearButton="true"
+                app:met_validateOnFocusLost="false"
+                fancy:met_floatingLabel="highlight"
+                fancy:met_maxCharacters="120"
+                fancy:met_primaryColor="#d81b60" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/pagu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="8dp"
+                android:hint="Pagu"
+                android:inputType="number"
+                app:met_clearButton="true"
+                fancy:met_floatingLabel="highlight"
+                fancy:met_maxCharacters="50"
+                fancy:met_primaryColor="#d81b60" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Pilih gambar :"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Lokasi :"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/imgbtn" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="12dp">
+
+                    <fragment
+                        android:id="@+id/map_view"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/bsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="25dp"
+                android:clickable="true"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="15dp"
+                fancy:fb_borderColor="#d81b60"
+                fancy:fb_borderWidth="2dp"
+                fancy:fb_defaultColor="#d81b60"
+                fancy:fb_focusColor="#cecece"
+                fancy:fb_fontIconResource="&#xf1d8;"
+                fancy:fb_iconPosition="right"
+                fancy:fb_radius="30dp"
+                fancy:fb_text="Kirim"
+                fancy:fb_textColor="#FFFF" />
+        </LinearLayout>
+    </ScrollView>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/kca"
+        android:icon="@drawable/dot"
+        android:title="Pengadaan Sarana dan Prasarana Olah Raga " />
+
+    <item
+        android:id="@+id/kcb"
+        android:icon="@drawable/dot"
+        android:title="pembinaan lembaga kemasyarakatan" />
+
+    <item
+        android:id="@+id/kcc"
+        android:icon="@drawable/dot"
+        android:title="pembinaan kesenian dan sosial budaya masyarakat " />
+
+
+</menu>

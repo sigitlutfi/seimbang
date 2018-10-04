@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/kba"
+        android:icon="@drawable/dot"
+        android:title="Pembangunan/Peningkatan Sarana Prasarana Ekonomi" />
+
+    <item
+        android:id="@+id/kbb"
+        android:icon="@drawable/dot"
+        android:title="Pembangunan/Peningkatan Infrastruktur Lingkungan Desa" />
+
+    <item
+        android:id="@+id/kbc"
+        android:icon="@drawable/dot"
+        android:title="Pembangunan/Peningkatan Sarana Kesehatan " />
+
+    <item
+        android:id="@+id/kbd"
+        android:title="Ppembangunan/Peningkatan Sarana Pendidikan dan Kebudayaan" />
+
+
+</menu>

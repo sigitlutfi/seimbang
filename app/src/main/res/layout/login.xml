@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="198dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bgoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:clickable="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        fancy:fb_borderColor="#4CAF50"
+        fancy:fb_borderWidth="2dp"
+        fancy:fb_defaultColor="#4CAF50"
+        fancy:fb_focusColor="#cecece"
+        fancy:fb_iconPosition="right"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="Google"
+        fancy:fb_textColor="#FFFF" >
+    </mehdi.sakout.fancybuttons.FancyButton>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bgoogle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="Atau"
+        android:textColor="@android:color/black" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/blogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:clickable="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        fancy:fb_borderColor="#d81b60"
+        fancy:fb_borderWidth="2dp"
+        fancy:fb_defaultColor="#d81b60"
+        fancy:fb_focusColor="#cecece"
+        fancy:fb_iconPosition="right"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="Login"
+        fancy:fb_textColor="#FFFF" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_above="@+id/pass"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:met_validateOnFocusLost="true"
+        app:met_clearButton="true"
+        fancy:met_floatingLabel="highlight"
+        fancy:met_primaryColor="#d81b60" />
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/blogin"
+        android:clickable="true"
+        android:hint="Password"
+        android:inputType="textPassword"
+        fancy:met_floatingLabel="highlight"
+        app:met_clearButton="true"
+        fancy:met_primaryColor="#d81b60" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/email">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center_horizontal"
+        android:text="Login"
+        android:textColor="@android:color/black"
+        android:textSize="38sp" />
+
+    <TextView
+        android:id="@+id/reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:clickable="true"
+        android:fontFamily="@font/comfortaa"
+        android:gravity="center_horizontal"
+        android:text="Register"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/bgoogle"
+        android:layout_alignBottom="@+id/bgoogle"
+        android:layout_alignTop="@+id/bgoogle"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/googleg_standard_color_18" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/kaa"
+        android:icon="@drawable/dot"
+        android:title="Pembangunan Sarana dan Prasarana Kantor Desa" />
+
+    <item
+        android:id="@+id/kab"
+        android:icon="@drawable/dot"
+        android:title="Pengelolaan Informasi Desa" />
+
+
+</menu>

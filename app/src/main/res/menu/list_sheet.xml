@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ma"
+        android:icon="@drawable/dot"
+        android:title="BIDANG PENYELENGGARAAN PEMERINTAH DESA"
+        android:titleCondensed="ma"/>
+
+    <item
+        android:id="@+id/mb"
+        android:icon="@drawable/dot"
+        android:title="BIDANG PELAKSANAAN PEMBANGUNAN DESA" android:titleCondensed="mb"/>
+
+    <item
+        android:id="@+id/mc"
+        android:icon="@drawable/dot"
+        android:title="BIDANG PEMBINAAN KEMASYARAKATAN" android:titleCondensed="mc"/>
+
+    <item
+        android:id="@+id/md"
+        android:icon="@drawable/dot"
+        android:title="BIDANG PEMBERDAYAAN MASYARAKAT" android:titleCondensed="md"/>
+
+</menu>

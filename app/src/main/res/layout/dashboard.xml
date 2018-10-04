@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="Halo,"
+        android:textColor="@android:color/black"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/tt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="top"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="32sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="50dp">
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cungu"
+        android:layout_alignTop="@+id/cungu"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Panduan Penggunaan"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="18dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cungu"
+        android:layout_below="@+id/textView9"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:text="Panduan penggunaan sistem aplikasi musrenbang SEIMBANG"
+        android:fontFamily="@font/comfortaa"
+        android:textSize="14dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cungu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/tt"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/ungu" />
+
+    </android.support.v7.widget.CardView>
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bhelp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cungu"
+        android:layout_alignBottom="@+id/cungu"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:elevation="13dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        fancy:fb_defaultColor="#FFFFFF"
+        fancy:fb_focusColor="#cecece"
+        fancy:fb_fontIconResource="&#xf059;"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="30dp"
+        fancy:fb_textGravity="left"
+        fancy:fb_text="Panduan"
+        fancy:fb_textColor="#96a0d1" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cpink"
+        android:layout_alignTop="@+id/cpink"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Isi formulir"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="18dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cpink"
+        android:layout_below="@+id/textView11"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:text="Memulai mengisi form musrenbang"
+        android:fontFamily="@font/comfortaa"
+        android:textSize="14dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cpink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/cungu"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
+
+        <ImageButton
+            android:id="@+id/imageButto2"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/pink" />
+
+    </android.support.v7.widget.CardView>
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btambah"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cpink"
+        android:layout_alignBottom="@+id/cpink"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:elevation="13dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        fancy:fb_defaultColor="#FFFFFF"
+        fancy:fb_focusColor="#cecece"
+        fancy:fb_fontIconResource="&#xf022;"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="Mulai"
+        fancy:fb_textColor="#d81b60" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbiru"
+        android:layout_alignTop="@+id/cbiru"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Profil"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="18dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbiru"
+        android:layout_below="@+id/textView14"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:text="Lihat profil pengguna"
+        android:fontFamily="@font/comfortaa"
+        android:textSize="14dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cbiru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/cpink"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
+
+        <ImageButton
+            android:id="@+id/imageButto3"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/biru"
+            android:scaleType="fitXY"/>
+
+    </android.support.v7.widget.CardView>
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bprofil"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbiru"
+        android:layout_alignBottom="@+id/cbiru"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:elevation="13dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        fancy:fb_defaultColor="#FFFFFF"
+        fancy:fb_focusColor="#cecece"
+        fancy:fb_fontIconResource="&#xf007;"
+        fancy:fb_iconPosition="left"
+        fancy:fb_textGravity="left"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="Profil"
+        fancy:fb_textColor="#65bbdf" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cijo"
+        android:layout_alignTop="@+id/cijo"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Suka Aplikasi"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="18dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbiru"
+        android:layout_below="@+id/textView16"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:text="Dukung dan share aplikasi kami di Playstore"
+        android:fontFamily="@font/comfortaa"
+        android:textSize="14dp"
+        android:elevation="13dp"
+        android:textColor="@android:color/white" />
+    <android.support.v7.widget.CardView
+        android:id="@+id/cijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/cbiru"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
+
+        <ImageButton
+            android:id="@+id/imageButto4"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@drawable/ijo" />
+
+    </android.support.v7.widget.CardView>
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/bplay"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cijo"
+        android:layout_alignBottom="@+id/cijo"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:elevation="13dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        fancy:fb_defaultColor="#FFFFFF"
+        fancy:fb_focusColor="#cecece"
+        fancy:fb_fontIconResource="&#xf164;"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="Suka"
+        fancy:fb_textColor="#50bb72" />
+</RelativeLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="SEIMBANG"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="SISTEM APLIKASI PERENCANAAN MUSRENBANG"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/usulan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="12dp"
+            android:hint="Usulan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.68"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bkat"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="120"
+            app:met_primaryColor="#d81b60" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/pagu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="8dp"
+            android:hint="Pagu"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@+id/usulan"
+            app:met_floatingLabel="highlight"
+            app:met_helperText="Dalam Rupiah"
+            app:met_maxCharacters="50"
+            app:met_primaryColor="#d81b60"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/bmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            fancy:fb_borderColor="#d81b60"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#FFFFFF"
+            fancy:fb_focusColor="#cecece"
+            fancy:fb_fontIconResource="&#xf078;"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Pilih Menu"
+            fancy:fb_textColor="#d81b60" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/bkat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmenu"
+            fancy:fb_borderColor="#d81b60"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#FFFFFF"
+            fancy:fb_focusColor="#cecece"
+            fancy:fb_fontIconResource="&#xf078;"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Pilih Kategori"
+            fancy:fb_textColor="#d81b60" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/bsubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:clickable="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/navv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            fancy:fb_borderColor="#d81b60"
+            fancy:fb_borderWidth="2dp"
+            fancy:fb_defaultColor="#d81b60"
+            fancy:fb_focusColor="#cecece"
+            fancy:fb_fontIconResource="&#xf1d8;"
+            fancy:fb_iconPosition="right"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Kirim"
+            fancy:fb_textColor="#FFFF" />
+
+        <ImageView
+            android:id="@+id/btimg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pagu"
+            fancy:srcCompat="@drawable/rounded" />
+
+    <ImageButton
+        android:id="@+id/buttonimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btimg"
+        app:layout_constraintEnd_toEndOf="@+id/btimg"
+        app:layout_constraintStart_toStartOf="@+id/btimg"
+        app:layout_constraintTop_toTopOf="@+id/btimg"
+        fancy:srcCompat="@drawable/img" />
+
+    <View
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/navv"></View>
+
+    <View
+        android:id="@+id/navv"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="25dp"></View>
+
+    <ImageView
+        android:id="@+id/homebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/navv"
+        app:layout_constraintStart_toStartOf="@+id/navv"
+        app:layout_constraintTop_toBottomOf="@+id/hr"
+        fancy:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/addbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/navv"
+        app:layout_constraintEnd_toEndOf="@+id/listbtn"
+        app:layout_constraintStart_toStartOf="@+id/homebtn"
+        app:layout_constraintTop_toBottomOf="@+id/hr"
+        fancy:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/listbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/navv"
+        app:layout_constraintEnd_toEndOf="@+id/navv"
+        app:layout_constraintTop_toBottomOf="@+id/hr"
+        fancy:srcCompat="@drawable/list" />
+
+
+</android.support.constraint.ConstraintLayout>
