@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -35,6 +36,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.kennyc.bottomsheet.BottomSheet;
 import com.kennyc.bottomsheet.BottomSheetListener;
+import com.leinardi.android.speeddial.SpeedDialActionItem;
+import com.leinardi.android.speeddial.SpeedDialView;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import org.w3c.dom.Text;
@@ -43,7 +46,6 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import faranjit.currency.edittext.CurrencyEditText;
 import mehdi.sakout.fancybuttons.FancyButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, BottomSheetListener, OnMapReadyCallback {
@@ -66,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.home);
         findViewById(R.id.bmenu).setOnClickListener(this);
         findViewById(R.id.bkat).setOnClickListener(this);
-        findViewById(R.id.bsubmit).setOnClickListener(this);
         //h = (TextView)findViewById(R.id.textView);
         dbmenu = (FancyButton)findViewById(R.id.bmenu);
         dbkat = (FancyButton)findViewById(R.id.bkat);
@@ -74,29 +75,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Locale localeID = new Locale("in", "ID");
         formatRupiah = NumberFormat.getCurrencyInstance(localeID);
         currencyEditText = (MaterialEditText) findViewById(R.id.pagu);
-        AHBottomNavigation bottomNavigation = (AHBottomNavigation) findViewById(R.id.bottom_navigation);
-        AHBottomNavigationItem item1 = new AHBottomNavigationItem("", R.drawable.home, R.color.colorAccent);
-        AHBottomNavigationItem item2 = new AHBottomNavigationItem("", R.drawable.add, R.color.colorAccent);
-        AHBottomNavigationItem item3 = new AHBottomNavigationItem("", R.drawable.list, R.color.colorAccent);
-        bottomNavigation.addItem(item1);
-        bottomNavigation.addItem(item2);
-        bottomNavigation.addItem(item3);
-        bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#FEFEFE"));
-        bottomNavigation.setTitleState(AHBottomNavigation.TitleState.ALWAYS_HIDE);
-        bottomNavigation.setCurrentItem(1);
-        bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
+
+        SpeedDialView speedDialView = findViewById(R.id.speedDial);
+        speedDialView.setMainFabClosedBackgroundColor(Color.parseColor("#FFFFFF"));
+        speedDialView.setMainFabOpenedBackgroundColor(Color.parseColor("#FFFFFF"));
+        speedDialView.addActionItem(
+                new SpeedDialActionItem.Builder(R.id.shome, R.drawable.home)
+                        .setFabBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setFabImageTintColor(Color.parseColor("#96a0d1"))
+                        .setLabel("Home")
+                        .setLabelColor(Color.parseColor("#96a0d1"))
+                        .setLabelBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setLabelClickable(true)
+                        .create()
+        );
+        speedDialView.addActionItem(
+                new SpeedDialActionItem.Builder(R.id.stambah, R.drawable.add)
+                        .setFabBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setLabel("Buat")
+                        .setLabelColor(Color.parseColor("#d81b60"))
+                        .setLabelBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setLabelClickable(true)
+                        .create()
+        );
+        speedDialView.addActionItem(
+                new SpeedDialActionItem.Builder(R.id.sprofil, R.drawable.list)
+                        .setFabBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setFabImageTintColor(Color.parseColor("#50bb72"))
+                        .setLabel("Profil")
+                        .setLabelColor(Color.parseColor("#50bb72"))
+                        .setLabelBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setLabelClickable(true)
+                        .create()
+        );
+
+        speedDialView.setOnActionSelectedListener(new SpeedDialView.OnActionSelectedListener() {
             @Override
-            public boolean onTabSelected(int position, boolean wasSelected) {
-                String position1 = String.valueOf(position);
-
-                Toast.makeText(getApplicationContext(), position1, Toast.LENGTH_SHORT).show();
-                if (position == 2){
-                    mAuth.signOut();
-                }else if (position == 0){
-
-                    startActivity(new Intent(MainActivity.this,Home.class));
+            public boolean onActionSelected(SpeedDialActionItem speedDialActionItem) {
+                switch (speedDialActionItem.getId()) {
+                    case R.id.stambah:
+                        startActivity(new Intent(MainActivity.this,MainActivity.class));finish();
+                        return false;// true to keep the Speed Dial open
+                    case R.id.shome:
+                        startActivity(new Intent(MainActivity.this,Home.class));finish();
+                        return false;
+                    case R.id.sprofil:
+                        View view = findViewById(R.layout.dashboard);
+                        Snackbar mSnackbar = Snackbar.make(findViewById(R.id.dashboard_layout),"wadaw", Snackbar.LENGTH_SHORT);
+                        mSnackbar.show();
+                    default:
+                        return false;
                 }
-                return true;
             }
         });
 
@@ -172,9 +201,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .show();
 
                 break;
-            case R.id.bsubmit:
-                Intent i = new Intent(MainActivity.this, Home.class);
-                startActivity(i);
         }
     }
 

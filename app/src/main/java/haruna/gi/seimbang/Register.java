@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -85,7 +86,7 @@ public class Register extends AppCompatActivity{
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+       // updateUI(currentUser);
     }
 
 
@@ -111,7 +112,7 @@ public class Register extends AppCompatActivity{
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
         // [START_EXCLUDE silent]
         //showProgressDialog();
-        Toast.makeText(getApplicationContext(), "Sedang Login", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Sedang Registrasi", Toast.LENGTH_SHORT).show();
         // [END_EXCLUDE]
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
@@ -122,7 +123,7 @@ public class Register extends AppCompatActivity{
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registrasi Berhasil", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
@@ -143,7 +144,23 @@ public class Register extends AppCompatActivity{
     private void addEmail(){
         String email = temail.getText().toString();
         String pass = tpass.getText().toString();
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        // temail.validateWith(RegexpValidator("Masukkan Email yang valid",email));
+        if ( !email.matches(emailPattern)|| TextUtils.isEmpty(email)) {
+            //Toast.makeText(getApplicationContext(), "Email tidak boleh kosong!", Toast.LENGTH_SHORT).show();
+            temail.setError("Email tidak boleh kosong!");
+            return;
+        }
 
+        if (TextUtils.isEmpty(pass)) {
+            tpass.setError("Pass tidak boleh kosong!");
+            return;
+        }
+
+        if (pass.length()<6){
+            tpass.setError("Pass minimal 6 karakter!");
+            return;
+        }
         mAuth.createUserWithEmailAndPassword(email,pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override

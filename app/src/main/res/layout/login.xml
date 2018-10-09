@@ -86,7 +86,6 @@
         android:layout_above="@+id/pass"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        app:met_validateOnFocusLost="true"
         app:met_clearButton="true"
         fancy:met_floatingLabel="highlight"
         fancy:met_primaryColor="#d81b60" />
@@ -102,6 +101,7 @@
         android:clickable="true"
         android:hint="Password"
         android:inputType="textPassword"
+        app:met_minCharacters="6"
         fancy:met_floatingLabel="highlight"
         app:met_clearButton="true"
         fancy:met_primaryColor="#d81b60" />

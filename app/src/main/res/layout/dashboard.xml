@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
+    android:id="@+id/dashboard_layout"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
@@ -24,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
+        android:layout_below="@id/top"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/comfortaa_bold"
@@ -33,7 +36,8 @@
         android:textSize="32sp" />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tt">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -60,7 +64,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="25dp"
-        android:text="Panduan penggunaan sistem aplikasi musrenbang SEIMBANG"
+        android:text="Panduan penggunaan sistem aplikasi perencanaan musrenbang"
         android:fontFamily="@font/comfortaa"
         android:textSize="14dp"
         android:elevation="13dp"
@@ -315,7 +319,13 @@
         fancy:fb_textColor="#50bb72" />
 </RelativeLayout>
     </ScrollView>
-
-
-
-</LinearLayout>
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:sdMainFabClosedSrc="@drawable/add"
+        app:layout_behavior="@string/speeddial_scrolling_view_snackbar_behavior"/>
+</RelativeLayout>

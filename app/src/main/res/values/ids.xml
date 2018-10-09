@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <item name="shome" type="id" />
+    <item name="stambah" type="id" />
+    <item name="sprofil" type="id" />
+    <item name="fab_custom_theme" type="id" />
+    <item name="fab_add_action" type="id" />
+    <item name="fab_replace_action" type="id" />
+    <item name="fab_remove_action" type="id" />
+</resources>

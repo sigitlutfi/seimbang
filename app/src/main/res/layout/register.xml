@@ -73,7 +73,7 @@
         fancy:fb_focusColor="#cecece"
         fancy:fb_iconPosition="right"
         fancy:fb_radius="30dp"
-        fancy:fb_text="Login"
+        fancy:fb_text="Registrasi"
         fancy:fb_textColor="#FFFF" />
 
     <com.rengwuxian.materialedittext.MaterialEditText

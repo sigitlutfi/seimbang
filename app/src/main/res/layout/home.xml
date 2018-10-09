@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <TextView
         android:id="@+id/judul"
         android:layout_width="wrap_content"
@@ -35,7 +37,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         android:scrollbarSize="12dp"
         android:scrollbarStyle="insideInset">
 
@@ -178,37 +180,17 @@
                 </android.support.v7.widget.CardView>
             </LinearLayout>
 
-            <mehdi.sakout.fancybuttons.FancyButton
-                android:id="@+id/bsubmit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="25dp"
-                android:clickable="true"
-                android:paddingBottom="15dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="15dp"
-                fancy:fb_borderColor="#d81b60"
-                fancy:fb_borderWidth="2dp"
-                fancy:fb_defaultColor="#d81b60"
-                fancy:fb_focusColor="#cecece"
-                fancy:fb_fontIconResource="&#xf1d8;"
-                fancy:fb_iconPosition="right"
-                fancy:fb_radius="30dp"
-                fancy:fb_text="Kirim"
-                fancy:fb_textColor="#FFFF" />
+
         </LinearLayout>
     </ScrollView>
-<android.support.design.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"/>
-</android.support.design.widget.CoordinatorLayout>
 </LinearLayout>
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:sdMainFabClosedSrc="@drawable/add"
+        app:layout_behavior="@string/speeddial_scrolling_view_snackbar_behavior"/>
+</RelativeLayout>
